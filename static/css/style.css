@@ -1,0 +1,1331 @@
+/* =================================
+   REGISTER PAGE
+   ================================= */
+
+.register-page {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    background: #f5f6f7;
+}
+
+
+/* =================================
+   REGISTER CARD
+   ================================= */
+
+.register-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 440px;
+
+    padding: 42px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e8;
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(3, 1, 100, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* Small color accent at the top */
+
+.register-accent {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #030164,
+        #363199,
+        #2D7495,
+        #E8E085
+    );
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+.register-header {
+    margin-bottom: 32px;
+}
+
+.register-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: rgba(232, 224, 133, 0.35);
+
+    color: #363199;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.register-header h2 {
+    margin: 0 0 8px;
+
+    color: #030164;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    letter-spacing: -0.6px;
+}
+
+.register-header p {
+    margin: 0;
+
+    color: #777b83;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   FORM
+   ================================= */
+
+.register-form p {
+    margin-bottom: 20px;
+}
+
+.register-form label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #363199;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.register-form input {
+    width: 100%;
+    height: 44px;
+
+    box-sizing: border-box;
+
+    padding: 0 13px;
+
+    border: 1px solid #d9dce1;
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    color: #222222;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Input focus */
+
+.register-form input:focus {
+    outline: none;
+
+    background: #ffffff;
+
+    border-color: #2D7495;
+
+    box-shadow:
+        0 0 0 3px rgba(45, 116, 149, 0.12);
+}
+
+
+/* =================================
+   DJANGO HELP TEXT
+   ================================= */
+
+.register-form .helptext {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #8b8e94;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =================================
+   ERRORS
+   ================================= */
+
+.register-form .errorlist {
+    padding: 0;
+    margin: 5px 0 8px;
+
+    list-style: none;
+
+    color: #b45f5f;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   REGISTER BUTTON
+   ================================= */
+
+.register-button {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #363199;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.register-button:hover {
+    background: #2D7495;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 16px rgba(45, 116, 149, 0.20);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+
+/* =================================
+   FOOTER
+   ================================= */
+
+.register-footer {
+    margin: 25px 0 0;
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeef;
+
+    text-align: center;
+
+    color: #85888e;
+
+    font-size: 13px;
+}
+
+.register-footer a {
+    color: #363199;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.register-footer a:hover {
+    color: #2D7495;
+}
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 500px) {
+
+    .register-page {
+        padding: 30px 15px;
+    }
+
+    .register-card {
+        padding: 32px 25px;
+
+        border-radius: 16px;
+    }
+
+    .register-header h2 {
+        font-size: 24px;
+    }
+}
+
+/* login */
+/* =================================
+   LOGIN PAGE
+   ================================= */
+
+.login-page {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    background: #f5f6f7;
+}
+
+
+/* =================================
+   LOGIN CARD
+   ================================= */
+
+.login-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 42px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e5e8;
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(3, 1, 100, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* Color accent */
+
+.login-accent {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #030164,
+        #363199,
+        #2D7495,
+        #E8E085
+    );
+}
+
+
+/* =================================
+   HEADER
+   ================================= */
+
+.login-header {
+    margin-bottom: 32px;
+}
+
+.login-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: rgba(232, 224, 133, 0.35);
+
+    color: #363199;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.login-header h2 {
+    margin: 0 0 8px;
+
+    color: #030164;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    letter-spacing: -0.6px;
+}
+
+.login-header p {
+    margin: 0;
+
+    color: #777b83;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   FORM
+   ================================= */
+
+.login-form p {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #363199;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.login-form input {
+    width: 100%;
+    height: 44px;
+
+    box-sizing: border-box;
+
+    padding: 0 13px;
+
+    border: 1px solid #d9dce1;
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    color: #222222;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Input focus */
+
+.login-form input:focus {
+    outline: none;
+
+    background: #ffffff;
+
+    border-color: #2D7495;
+
+    box-shadow:
+        0 0 0 3px rgba(45, 116, 149, 0.12);
+}
+
+
+/* =================================
+   ERRORS
+   ================================= */
+
+.login-form .errorlist {
+    padding: 0;
+    margin: 5px 0 8px;
+
+    list-style: none;
+
+    color: #b45f5f;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+   LOGIN BUTTON
+   ================================= */
+
+.login-button {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #363199;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+    background: #2D7495;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 16px rgba(45, 116, 149, 0.20);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+
+/* =================================
+   FOOTER
+   ================================= */
+
+.login-footer {
+    margin: 25px 0 0;
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeef;
+
+    text-align: center;
+
+    color: #85888e;
+
+    font-size: 13px;
+}
+
+.login-footer a {
+    color: #363199;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.login-footer a:hover {
+    color: #2D7495;
+}
+
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 500px) {
+
+    .login-page {
+        padding: 30px 15px;
+    }
+
+    .login-card {
+        padding: 32px 25px;
+
+        border-radius: 16px;
+    }
+
+    .login-header h2 {
+        font-size: 24px;
+    }
+}
+/* ============================= */
+/* TWEET CREATE / EDIT PAGE */
+/* ============================= */
+
+.tweet-page {
+    min-height: 75vh;
+    padding: 50px 20px;
+    background: #f5f6f7;
+}
+
+.tweet-header {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.tweet-label {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(232, 224, 133, 0.25);
+    color: #363199;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.tweet-header h1 {
+    color: #030164;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tweet-header p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* CARD */
+
+.tweet-card {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(3, 1, 100, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.tweet-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #030164,
+        #363199,
+        #2D7495,
+        #E8E085
+    );
+}
+
+.tweet-card h2 {
+    color: #030164;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+
+/* FORM */
+
+.tweet-form p {
+    margin-bottom: 20px;
+}
+
+.tweet-form label {
+    display: block;
+    color: #363199;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.tweet-form input,
+.tweet-form textarea,
+.tweet-form select {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #d9d9df;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #ffffff;
+    color: #333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tweet-form input:focus,
+.tweet-form textarea:focus,
+.tweet-form select:focus {
+    outline: none;
+    border-color: #2D7495;
+    box-shadow: 0 0 0 3px rgba(45, 116, 149, 0.12);
+}
+
+.tweet-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+
+/* SUBMIT BUTTON */
+
+.tweet-submit-button {
+    width: 100%;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #363199;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.tweet-submit-button:hover {
+    background: #2D7495;
+}
+
+
+/* BACK BUTTON */
+
+.tweet-back-button {
+    display: block;
+    margin-top: 14px;
+    padding: 11px 20px;
+    border: 1px solid #d9d9df;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #363199;
+    background: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.tweet-back-button:hover {
+    background: #f5f6f7;
+    border-color: #363199;
+    color: #030164;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+
+    .tweet-page {
+        padding: 35px 15px;
+    }
+
+    .tweet-card {
+        padding: 30px 22px;
+    }
+
+    .tweet-header h1 {
+        font-size: 28px;
+    }
+
+}
+
+/* ============================= */
+/* TWEET LIST PAGE */
+/* ============================= */
+
+.tweet-list-page {
+    min-height: 75vh;
+    padding: 50px 20px;
+    background: #f5f6f7;
+}
+
+
+/* HEADER */
+
+.tweet-list-header {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.tweet-list-label {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(232, 224, 133, 0.25);
+    color: #363199;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.tweet-list-header h1 {
+    color: #030164;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tweet-list-header p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+
+/* CREATE BUTTON */
+
+.tweet-create-button {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 8px;
+    background: #363199;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.tweet-create-button:hover {
+    background: #2D7495;
+    color: #ffffff;
+}
+
+
+/* TWEET GRID */
+
+.tweet-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* TWEET CARD */
+
+.tweet-list-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(3, 1, 100, 0.07);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.tweet-list-card::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #030164,
+        #363199,
+        #2D7495,
+        #E8E085
+    );
+}
+
+.tweet-list-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(3, 1, 100, 0.10);
+}
+
+
+/* USER */
+
+.tweet-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.tweet-avatar {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #030164;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tweet-card-header h5 {
+    margin: 0;
+    color: #030164;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.tweet-owner {
+    display: block;
+    margin-top: 2px;
+
+    color: #2D7495;
+    font-size: 11px;
+}
+
+
+/* CONTENT */
+
+.tweet-content {
+    margin-bottom: 20px;
+}
+
+.tweet-text {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.tweet-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+
+/* IMAGE */
+
+.tweet-image-wrapper {
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tweet-image {
+    width: 100%;
+    max-height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.tweet-list-card:hover .tweet-image {
+    transform: scale(1.02);
+}
+
+
+/* ACTION BUTTONS */
+
+.tweet-actions {
+    display: flex;
+    gap: 8px;
+
+    padding-top: 16px;
+    border-top: 1px solid #eeeeee;
+}
+
+.tweet-edit-button,
+.tweet-delete-button {
+    flex: 1;
+
+    padding: 9px 12px;
+
+    border-radius: 7px;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.tweet-edit-button {
+    border: 1px solid #363199;
+    color: #363199;
+    background: #ffffff;
+}
+
+.tweet-edit-button:hover {
+    background: #363199;
+    color: #ffffff;
+}
+
+.tweet-delete-button {
+    background: #f3eeee;
+    color: #a33b3b;
+    border: 1px solid #eadada;
+}
+
+.tweet-delete-button:hover {
+    background: #a33b3b;
+    color: #ffffff;
+}
+
+
+/* EMPTY STATE */
+
+.tweet-empty {
+    grid-column: 1 / -1;
+
+    max-width: 500px;
+    margin: 30px auto;
+
+    padding: 45px 30px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(3, 1, 100, 0.07);
+}
+
+.tweet-empty-icon {
+    font-size: 32px;
+    color: #E8E085;
+    margin-bottom: 12px;
+}
+
+.tweet-empty h3 {
+    color: #030164;
+    margin-bottom: 8px;
+}
+
+.tweet-empty p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .tweet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .tweet-list-page {
+        padding: 35px 15px;
+    }
+
+    .tweet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tweet-list-header h1 {
+        font-size: 28px;
+    }
+
+    .tweet-list-card {
+        padding: 20px;
+    }
+
+}
+
+/* ============================= */
+/* GLOBAL */
+/* ============================= */
+
+body {
+    margin: 0;
+    background: #f5f6f7;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.post-navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 3px 15px rgba(3, 1, 100, 0.05);
+    padding: 12px 0;
+}
+
+.navbar-container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* BRAND */
+
+.post-brand {
+    color: #030164 !important;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.post-brand:hover {
+    color: #363199 !important;
+}
+
+
+/* NAV LINKS */
+
+.post-nav-link {
+    color: #555 !important;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: color 0.2s ease;
+}
+
+.post-nav-link:hover {
+    color: #363199 !important;
+}
+
+
+/* SEARCH */
+
+.post-search {
+    margin-right: 20px;
+}
+
+.post-search .form-control {
+    width: 230px;
+    border: 1px solid #dddddf;
+    border-radius: 8px 0 0 8px;
+    padding: 9px 12px;
+    font-size: 13px;
+}
+
+.post-search .form-control:focus {
+    border-color: #2D7495;
+    box-shadow: 0 0 0 3px rgba(45, 116, 149, 0.10);
+}
+
+
+/* SEARCH BUTTON */
+
+.post-search-button {
+    border: none;
+    padding: 0 15px;
+
+    border-radius: 0 8px 8px 0;
+
+    background: #2D7495;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: background 0.2s ease;
+}
+
+.post-search-button:hover {
+    background: #363199;
+}
+
+
+/* NAVBAR ACTIONS */
+
+.post-navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* NEW TWEET */
+
+.post-create-nav-button {
+    padding: 8px 14px;
+    border-radius: 7px;
+
+    background: #363199;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: background 0.2s ease;
+}
+
+.post-create-nav-button:hover {
+    background: #2D7495;
+    color: #ffffff;
+}
+
+
+/* WELCOME */
+
+.post-welcome {
+    color: #363199;
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-left: 5px;
+}
+
+
+/* LOGOUT */
+
+.post-logout-form {
+    margin: 0;
+}
+
+.post-logout-button {
+    border: none;
+
+    padding: 8px 14px;
+    border-radius: 7px;
+
+    background: #f3eeee;
+    color: #a33b3b;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.post-logout-button:hover {
+    background: #a33b3b;
+    color: #ffffff;
+}
+
+
+/* LOGIN */
+
+.post-login-button {
+    padding: 8px 15px;
+    border: 1px solid #363199;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #363199;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.post-login-button:hover {
+    background: #363199;
+    color: #ffffff;
+}
+
+
+/* REGISTER */
+
+.post-register-button {
+    padding: 8px 15px;
+    border-radius: 7px;
+
+    background: #E8E085;
+    color: #030164;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: background 0.2s ease;
+}
+
+.post-register-button:hover {
+    background: #2D7495;
+    color: #ffffff;
+}
+
+
+/* ============================= */
+/* MOBILE NAVBAR */
+/* ============================= */
+
+@media (max-width: 991px) {
+
+    .navbar-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .post-navbar-actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 15px;
+    }
+
+    .post-search {
+        margin: 15px 0 5px;
+        width: 100%;
+    }
+
+    .post-search .form-control {
+        width: 100%;
+    }
+
+    .post-welcome {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .post-create-nav-button,
+    .post-login-button,
+    .post-register-button,
+    .post-logout-button {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+}

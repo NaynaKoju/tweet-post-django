@@ -1,0 +1,184 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>
+        {% block title %}Post IT!{% endblock %}
+    </title>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg post-navbar">
+
+        <div class="container-fluid navbar-container">
+
+            <!-- BRAND -->
+
+            <a class="navbar-brand post-brand" href="{% url 'tweet_list' %}">
+                POST IT!
+            </a>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- NAVBAR CONTENT -->
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <!-- LEFT SIDE -->
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link post-nav-link"
+                            href="{% url 'tweet_list' %}"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- SEARCH -->
+
+                <form
+                    class="d-flex post-search"
+                    method="get"
+                    action="{% url 'tweet_search' %}"
+                >
+
+                    <input
+                        class="form-control"
+                        type="search"
+                        name="q"
+                        placeholder="Search tweets..."
+                        aria-label="Search tweets"
+                    >
+
+                    <button
+                        class="post-search-button"
+                        type="submit"
+                    >
+                        Search
+                    </button>
+
+                </form>
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="post-navbar-actions">
+
+                    <a
+                        href="{% url 'tweet_create' %}"
+                        class="post-create-nav-button"
+                    >
+                        + New Tweet
+                    </a>
+
+
+                    {% if user.is_authenticated %}
+
+                        <span class="post-welcome">
+                            Welcome, {{ user.username }}
+                        </span>
+
+                        <form
+                            method="post"
+                            action="{% url 'logout' %}"
+                            class="post-logout-form"
+                        >
+
+                            {% csrf_token %}
+
+                            <button
+                                type="submit"
+                                class="post-logout-button"
+                            >
+                                Logout
+                            </button>
+
+                        </form>
+
+                    {% else %}
+
+                        <a
+                            href="{% url 'login' %}"
+                            class="post-login-button"
+                        >
+                            Login
+                        </a>
+
+                        <a
+                            href="{% url 'register' %}"
+                            class="post-register-button"
+                        >
+                            Register
+                        </a>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- PAGE CONTENT -->
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+    ></script>
+
+</body>
+
+</html>

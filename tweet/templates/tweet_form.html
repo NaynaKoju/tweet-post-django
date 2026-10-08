@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}TWEET!{% endblock %}
+
+{% block content %}
+
+<div class="tweet-page">
+
+    <div class="tweet-header">
+        <span class="tweet-label">SHARE YOUR THOUGHTS</span>
+
+        <h1>Pour Your Mind Out!</h1>
+
+        <p>Say what you're thinking. Keep it simple.</p>
+    </div>
+
+    <div class="tweet-card">
+
+        <h2>
+            {% if form.instance.pk %}
+                Edit Tweet
+            {% else %}
+                Create New Tweet
+            {% endif %}
+        </h2>
+
+        <form method="post" enctype="multipart/form-data" class="tweet-form">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="tweet-submit-button">
+                {% if form.instance.pk %}
+                    Update Tweet
+                {% else %}
+                    Post Tweet
+                {% endif %}
+            </button>
+
+        </form>
+
+        <a href="{% url 'tweet_list' %}" class="tweet-back-button">
+            Back to Tweet List
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

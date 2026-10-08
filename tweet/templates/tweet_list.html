@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block title %}TWEET!{% endblock %}
+
+{% block content %}
+
+<div class="tweet-list-page">
+
+    <div class="tweet-list-header">
+
+        <span class="tweet-list-label">POST IT</span>
+
+        <h1>Pour Your Mind Out!</h1>
+
+        <p>See what everyone has to say.</p>
+
+        <a href="{% url 'tweet_create' %}" class="tweet-create-button">
+            + Create New Tweet
+        </a>
+
+    </div>
+
+
+    <div class="tweet-grid">
+
+        {% for tweet in tweets %}
+
+            <div class="tweet-list-card">
+
+                <div class="tweet-card-header">
+
+                    <div class="tweet-avatar">
+                        {{ tweet.user.username|first|upper }}
+                    </div>
+
+                    <div>
+                        <h5>{{ tweet.user.username }}</h5>
+
+                        {% if tweet.user == user %}
+                            <span class="tweet-owner">Your post</span>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+
+                <div class="tweet-content">
+
+                    {% if tweet.text %}
+                        <p class="tweet-text">
+                            {{ tweet.text }}
+                        </p>
+                    {% endif %}
+
+                    {% if tweet.content %}
+                        <p class="tweet-description">
+                            {{ tweet.content }}
+                        </p>
+                    {% endif %}
+
+                    {% if tweet.photo %}
+                        <div class="tweet-image-wrapper">
+                            <img
+                                src="{{ tweet.photo.url }}"
+                                alt="Tweet Photo"
+                                class="tweet-image"
+                            >
+                        </div>
+                    {% endif %}
+
+                </div>
+
+
+                {% if tweet.user == user %}
+
+                    <div class="tweet-actions">
+
+                        <a
+                            href="{% url 'tweet_edit' tweet.id %}"
+                            class="tweet-edit-button"
+                        >
+                            Edit
+                        </a>
+
+                        <a
+                            href="{% url 'tweet_delete' tweet.id %}"
+                            class="tweet-delete-button"
+                        >
+                            Delete
+                        </a>
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+        {% empty %}
+
+            <div class="tweet-empty">
+
+                <div class="tweet-empty-icon">
+                    ✦
+                </div>
+
+                <h3>No tweets yet</h3>
+
+                <p>
+                    Be the first person to pour their mind out.
+                </p>
+
+                <a href="{% url 'tweet_create' %}" class="tweet-create-button">
+                    Create the first tweet
+                </a>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

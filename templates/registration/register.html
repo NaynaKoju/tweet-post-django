@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="register-page">
+
+    <div class="register-card">
+
+        <div class="register-accent"></div>
+
+        <div class="register-header">
+            <span class="register-label">WELCOME</span>
+
+            <h2>Create an account</h2>
+
+            <p>
+                Start sharing what's on your mind.
+            </p>
+        </div>
+
+        <form method="post" class="register-form">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="register-button">
+                Create account
+            </button>
+        </form>
+
+        <p class="register-footer">
+            Already have an account?
+            <a href="{% url 'login' %}">Log in</a>
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}
